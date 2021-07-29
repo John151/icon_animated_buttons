@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inliten icon demo</title>
+    <script src="https://kit.fontawesome.com/046daa7f6f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    
+    </script>
+<style>
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    height: 100%;
+    background-color: powderblue;
+}
+
+.container{
+    background-color: pink;
+    margin: auto;
+    width: 70%;
+    height: 50%;
+}
+.row{
+    width: 100%;
+    display: block;
+    height: 50%;
+}
+.quarter{
+    width: 25%;
+}
+
+.left{
+    float: left;
+}
+.text-allign{
+    text-align: center;
+}
+.lottie{
+    height: 100%;
+    width: 24.9999%;
+    object-fit: contain;
+    margin: auto;
+    box-sizing: border-box;
+
+}
+.lottie:hover{
+    background-color: #e6bac1;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container icon-container">
+        
+        <div class="row">
+            <div id="icon-1" class="quarter left text-allign lottie"></div>
+            <div id="icon-2" class="quarter left text-allign lottie"></div>
+            <div id="icon-3" class="quarter left text-allign lottie"></div>
+            <div id="icon-4" class="quarter left text-allign lottie"></div>
+        </div>
+
+        <div class="row">
+            <div id="icon-5" class="quarter left text-allign lottie"></div>
+            <div id="icon-6" class="quarter left text-allign lottie"></div>
+            <div id="icon-7" class="quarter left text-allign lottie"></div>
+            <div id="icon-8" class="quarter left text-allign lottie"></div>
+
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.12/lottie.min.js"></script>
+
+<script>
+    var animation = bodymovin.loadAnimation({
+        container: document.getElementById('icon-1'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/add/add.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation2 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-2'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/add-to-favorites/add-to-favorites.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation3 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-3'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/check-circle/check-circle.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation4 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-4'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/heart/heart.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation5 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-5'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/favorite-folder/favorite-folder.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation6 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-6'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/add-to-collection/add-to-collection.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation7 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-7'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/bookmark/bookmark.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+    var animation8 = bodymovin.loadAnimation({
+        container: document.getElementById('icon-8'), // Required
+        path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/light-on/light-on.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "Demo Animation", // Name for future reference. Optional.
+        });
+
+
+animation.goToAndStop(0, true);
+animation2.goToAndStop(0, true);
+animation3.goToAndStop(0, true);
+animation4.goToAndStop(0, true);
+animation5.goToAndStop(0, true);
+animation6.goToAndStop(0, true);
+animation7.goToAndStop(0, true);
+animation8.goToAndStop(0, true);
+
+
+var lottie = document.getElementById("icon-1");
+var state = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation.playSegments([14, 27], true);
+        state = 'pause'
+    }
+});
+
+var lottie2 = document.getElementById("icon-2");
+var state2 = 'play';
+
+lottie2.addEventListener('click', () => {
+    if(state2 === 'play') {
+        animation2.playSegments([0, 14], true);
+        state2 = 'pause';
+    } else {
+        animation2.playSegments([14, 27], true);
+        state2 = 'play';
+    }
+});
+
+var lottie = document.getElementById("icon-3");
+var state3 = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation3.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation3.playSegments([14, 27], true);
+        state = 'play'
+    }
+});
+
+var lottie = document.getElementById("icon-4");
+var state4 = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation4.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation4.playSegments([14, 27], true);
+        state = 'play'
+    }
+});
+
+var lottie = document.getElementById("icon-5");
+var state5 = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation5.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation5.playSegments([14, 27], true);
+        state = 'play'
+    }
+});
+
+var lottie = document.getElementById("icon-6");
+var state6 = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation6.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation6.playSegments([14, 27], true);
+        state = 'play'
+    }
+});
+
+var lottie = document.getElementById("icon-7");
+var state7 = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation7.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation7.playSegments([14, 27], true);
+        state = 'play'
+    }
+});
+
+var lottie = document.getElementById("icon-8");
+var state8 = 'play';
+
+lottie.addEventListener('click', () => {
+    if(state === 'play') {
+        animation8.playSegments([0, 14], true);
+        state = 'pause';
+    } else {
+        animation8.playSegments([14, 27], true);
+        state = 'play'
+    }
+});
+
+
+
+
+</script>
+
+</body>
+</html>
